@@ -1,0 +1,63 @@
+:root {
+  --btn-bg: #d8d9db;
+  --btn-bg-hover:#ebebeb;
+  --btn-bg-active : #bbbcbe;
+  --last-btn-bg: #df974c;
+  --last-btn-bg-hover: #dfb07e;
+  --last-btn-bg-active: #dd8d37;
+}
+
+.header {
+  font-size: 50px;
+  text-align: center;
+}
+.clac-container {
+  margin-top: 70px;
+}
+.calculator {
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.display {
+  text-align: right;
+  font-size: 30px;
+  padding: 20px;
+  color: #ffffff;
+  background-color: black;
+}
+.calc-btns-div {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+button {
+  background-color: var(--btn-bg);
+  font-size: 30px;
+  padding: 18px;
+  border: 1px solid black;
+  width: 25%;
+}
+button:hover{
+    background-color: var(--btn-bg-hover);
+}
+button:active{
+    background-color: var(--btn-bg-active);
+}
+#clear-btn {
+  width: 50%;
+}
+#zero-btn {
+  width: 75%;
+}
+
+button:last-child {
+  color: #ffffff;
+  background-color: var(--last-btn-bg);
+}
+button:last-child:hover {
+  background-color: var(--last-btn-bg-hover);
+}
+button:last-child:active {
+  background-color: var(--last-btn-bg-active);
+}

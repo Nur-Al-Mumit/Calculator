@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calcultor</title>
     <!-- Style  -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/76114addde.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <main>
-        <header>
-            <h1>Explore Your Calculator</h1>
-        </header>
-        <section class="clac-container">
-            <div class="calculator">
-                <div class="calc-display">
-
-                </div>
-                <div class="clac-btn">
-
-                </div>
+      <header>
+        <h1 class="header">Explore Your Calculator</h1>
+      </header>
+      <section class="clac-container">
+        <div class="calculator">
+          <div class="calc-display">
+            <div class="display">0</div>
+          </div>
+          <div class="clac-btn-container">
+            <div class="calc-btns-div">
+              <button id="clear-btn">C</button
+              ><button><i class="fa-solid fa-left-long"></i></button
+              ><button><i class="fa-solid fa-divide"></i></button>
             </div>
-        </section>
+            <div class="calc-btns-div">
+              <button>7</button><button>8</button><button>9</button
+              ><button><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="calc-btns-div">
+              <button>4</button><button>5</button><button>6</button
+              ><button><i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="calc-btns-div">
+              <button>1</button><button>2</button><button>3</button
+              ><button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="calc-btns-div">
+              <button id="zero-btn">0</button
+              ><button><i class="fa-solid fa-equals"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
