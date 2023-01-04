@@ -13,7 +13,7 @@ allBtns.addEventListener("click", function (event) {
   }
   printResult();
 });
-
+// For Handle Symbol
 function forSymbol(symbol) {
   switch (symbol) {
     case "C":
@@ -37,13 +37,14 @@ function forSymbol(symbol) {
       if (preOperator === null) {
         return;
       }
-      doSum(parseInt(pressedKey.slice(1)));
-      previousOperator = null;
-      pressedKey = +subTotal;
+      doSum(parseInt(pressedKey)); //.slice(1)
+      preOperator = null;
+      pressedKey = subTotal;
       subTotal = 0;
       break;
   }
 }
+// For Handle Number
 function forNumber(number) {
   if (pressedKey === "0") {
     pressedKey = number;
@@ -54,35 +55,27 @@ function forNumber(number) {
 
 // For Math Operatior
 function mathOperators(oparators) {
-  console.log("sosfskafksf ", pressedKey);
   switch (pressedKey) {
     case "0":
     case "÷":
     case "×":
     case "-":
     case "+":
-      break;
+      return;
   }
 
   if (subTotal === 0) {
     subTotal = parseInt(pressedKey);
+    console.log("sub total first", subTotal);
   } else {
-    doSum(pressedKey);
+    doSum(parseInt(pressedKey));
   }
 
   preOperator = oparators;
-  pressedKey = oparators;
-
-  //   switch (oparators) {
-  //     case "÷":
-  //     case "×":
-  //     case "-":
-  //     case "+":
-  //   }
+  pressedKey = "0";
 }
 
 function doSum(newNumber) {
-  //   let newNumber = parseInt(number.slice(1));
   switch (preOperator) {
     case "÷":
       subTotal /= newNumber;
@@ -98,8 +91,6 @@ function doSum(newNumber) {
       break;
   }
   pressedKey = subTotal;
-  console.log("fjsafjsalfjakl jflas", subTotal);
-  console.log("new bumer for math", newNumber);
 }
 // For print the math operation result
 function printResult() {
